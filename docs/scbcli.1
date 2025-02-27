@@ -1,0 +1,33 @@
+.TH SCBCLI 1 "February 2025" "Version 1.0" "SecureCodeBox CLI"
+.SH NAME
+scbcli - A CLI tool for managing SecureCodeBox scans.
+.SH SYNOPSIS
+.B scbcli start
+[\fISCANNER\fR] \fITARGET\fR [\fB-n\fR \fINAMESPACE\fR]
+
+.B scbcli status
+\fISCAN_NAME\fR [\fB-n\fR \fINAMESPACE\fR]
+.SH DESCRIPTION
+scbcli helps automate SecureCodeBox scans in Kubernetes.
+.SH COMMANDS
+.TP
+.B start SCANNER TARGET
+Starts a new scan using SCANNER on TARGET.
+.TP
+.B status SCAN_NAME
+Checks the status of a running scan.
+.SH OPTIONS
+.TP
+\fB-n\fR, \fB--namespace\fR
+Specify the Kubernetes namespace (default: "default").
+.TP
+\fB-h\fR, \fB--help\fR
+Show this help message.
+.SH EXAMPLES
+To start an Nmap scan:
+.B scbcli start nmap http://example.com
+
+To check scan status:
+.B scbcli status nmap-scan
+.SH AUTHOR
+Written by Your Name.
